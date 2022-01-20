@@ -4,6 +4,22 @@
 	box-sizing: border-box;
 }
 
+html {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	line-height: 1.5;
+	font-size: 16px;
+	color: grey;
+}
+
+a {
+	color: grey;
+}
+
+a:visited {
+	color: grey;
+}
+
 .clearfix::after {
 	content: '';
 	display: table;
@@ -11,49 +27,58 @@
 }
 
 .container {
-	width: 500px;
-	margin: 2rem auto;
+	max-width: 900px;
+	margin: 1rem auto;
 }
 
-
-/* DEBUG SECTION */
-
-.debug header {
-	height: 100px;
-	background-color: #e579e6;
+.rounded {
+	border-radius: .8rem;
 }
 
-.debug .banner {
-	background-color: #e1d67a;
+.logo {
+	height: 3rem;
 }
 
-.debug .section-main {
-	background-color: #0085fd;
+.nav-bar {
+	margin: 1rem 0;
 }
 
-.debug .section-header {
-	height: 50px;
-	background-color: #abcfe7;
+.nav-bar ul {
+	list-style: none;
+	font-size: 0;
 }
 
-.debug .col {
-	height: 300px;
-	background-color: #abcfe7;
+.nav-bar li {
+	display: inline-block;
+	font-size: 16px;
 }
 
-.debug footer {
-	height: 100px;
-	background-color: #8801fe;
+.nav-bar a {
+	display: inline-block; /* applicato qui per aumentare l'area cliccabile del link */
+	padding: 1em 1.2em;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
-
-
-
-/* MAIN CSS */
+.nav-bar a:hover {
+	background-color: lightgrey;
+}
 
 .banner {
-	height: 300px;
+	height: 400px;
 	margin: 1rem 0;
+	background-image: url(../img/banner.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+	color: white;
+}
+
+.banner .banner-article {
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 250px 40% 2rem 2rem;
 }
 
 .section-main {
@@ -61,22 +86,49 @@
 	padding-bottom: 1rem;
 }
 
-.section-header {
+.section-main .section-header {
 	margin-bottom: 1rem;
 }
 
-.col {
+.section-main h1,
+.section-main h2 {
+	color: black;
+}
+
+.section-main .col {
 	width: 20%;
 	float: left;
 }
 
-.col-center {
+.section-main .col-center {
 	width: 50%;
 	margin-right: 1rem;
 	margin-left: 1rem;
 }
 
-.col-left,
-.col-right {
+.section-main .col-left,
+.section-main .col-right {
 	width: calc((100% - 50% - 2rem) / 2);
+}
+
+.section-main img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	object-position: center;
+	filter: brightness(0.8);
+}
+
+footer {
+	text-align: center;
+}
+
+footer span {
+	vertical-align: middle;
+}
+
+footer .heart {
+	color: red;
+	font-size: 25px;
+	margin-left: .2em;
 }
